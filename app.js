@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 const cors = require('cors');
-mongoose.connect('mongodb://localhost/raffle', {useNewUrlParser: true, useUnifiedTopology: true});
+
+
+mongoose.connect('mongodb+srv://armando:armando@cluster0-1qgup.mongodb.net/raffle?retryWrites=true&w=majority',
+    {useNewUrlParser: true, useUnifiedTopology: true});
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
