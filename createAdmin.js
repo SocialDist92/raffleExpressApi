@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const User = require('./models/user');
 const PASS = 'rifas_cotorras';
 
-mongoose.connect('mongodb://localhost/raffle', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb+srv://armando:armando@cluster0-1qgup.mongodb.net/raffle?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.set('useFindAndModify', false);
 
 const UserModel = mongoose.model('User', User);
